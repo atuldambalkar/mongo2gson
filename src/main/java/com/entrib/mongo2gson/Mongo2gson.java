@@ -152,6 +152,19 @@ public final class Mongo2gson {
         }
         throw new IllegalArgumentException("Unsupported value type for: " + value);
     }
+   
+   /**
+     * Convert object to a String
+     * @param value
+     * @return JsonElement
+     */
+
+    public JsonElement getAsJsonInteger(Object value) {
+        if (value instanceof Integer) {
+            return new JsonPrimitive((Integer) value);
+        }
+        throw new IllegalArgumentException("Unsupported value type for: " + value);
+    }
 
 
 }
