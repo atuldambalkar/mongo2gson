@@ -159,6 +159,7 @@ public final class Mongo2gson {
      * @return JsonElement
      */
 
+
     public JsonElement getAsJsonInteger(Object value) {
         if (value instanceof Integer) {
             return new JsonPrimitive((Integer) value);
